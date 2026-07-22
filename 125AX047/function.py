@@ -23,9 +23,6 @@ def div (a,b)-> int:
     return a/b
 
 
-
-
-
 print("CALCULATOR \n")
 
 inp =1
