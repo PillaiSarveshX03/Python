@@ -1,3 +1,9 @@
+def choice_op():
+    print('''
+    PRESS 1 TO INSERT 
+    PRESS 2 TO SHOW RESULT
+
+    ''')
 
 def choice_dis():
     print("Press 1 for SUM")
@@ -17,29 +23,57 @@ def num_inp():
 
 
 
-def sum (num)-> int:
-    result=0 
-    for n in num:
-        result+=n
-    return result
-
-def dif (num)-> int:
+def sum ():
     result=0
-    for n in num:
-        result-=n
-    return result
 
-def mul (num)-> int:
-    result=1
-    for n in num:
-        result*=n
-    return result
+    choice=1
 
-def div (num)-> int:
+    while choice!=2:
+        choice_op()
+        choice=int(input())
+        if choice==1:
+            result+=int(input("Enter the number :"))
+
+    print("RESULT = ",result)
+
+def dif ():
+    result=0
+
+    choice=1
+
+    while choice!=2:
+        choice_op()
+        choice=int(input())
+        if choice==1:
+            result-=int(input("Enter the number :"))
+
+    print("RESULT = ",result)
+
+def mul ():
     result=1
-    for n in num:
-        result/=n
-    return result
+
+    choice=1
+
+    while choice!=2:
+        choice_op()
+        choice=int(input())
+        if choice==1:
+            result*=int(input("Enter the number :"))
+
+    print("RESULT = ",result)
+
+def div ():
+    result=1
+
+    choice=1
+
+    while choice!=2:
+        choice_op()
+        choice=int(input())
+        if choice==1:
+            result/=int(input("Enter the number :"))
+
+    print("RESULT = ",result)
 
 
 
@@ -60,23 +94,23 @@ while inp!=5:
         break
 
 
-    
-    int=num_inp()
-
-
 
     match inp:
-        case 1: print("SUM")
-                
+        case 1: 
+            print("SUM")
+            sum()
 
-        case 2: print("DIFFERENECE")
-                
+        case 2: 
+            print("DIFFERENECE")
+            dif()
 
-        case 3: print("MULTIPLY")
-                
+        case 3: 
+            print("MULTIPLY")
+            mul()
         
-        case 4: print("DIVISION")
-                
+        case 4: 
+            print("DIVISION")
+            div()
 
         case _: print("INVALID CHOICE")
 
