@@ -8,6 +8,7 @@
 
 # file.close()
 
+
 ## WRITE
 
 # file = open("example.txt","w")
@@ -15,3 +16,16 @@
 # file.write(input("Enter Sample Text :"))
 
 # file.close()
+
+
+
+## APPEND
+
+# file = open("example.txt","a")
+
+# file.write(input("Enter Sample Text :"))
+# file.close()
+
+
+with open("example.txt","r") as file:
+    print(file.read(10))

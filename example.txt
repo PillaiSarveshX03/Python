@@ -1,83 +1,32 @@
-Missile Information (Educational Overview)
-==========================================
 
 1. Agni-V
 ----------
-Country: India
-Type: Intercontinental-class Ballistic Missile (ICBM-class)
-Approximate Range: 5,000–5,500 km
-Purpose: Strategic deterrence
 
 2. Prithvi-II
 -------------
-Country: India
-Type: Short-Range Ballistic Missile (SRBM)
-Approximate Range: 350 km
-Purpose: Surface-to-surface strike
 
 3. BrahMos
 ----------
-Country: India/Russia
-Type: Supersonic Cruise Missile
-Approximate Range: 290–450+ km (variant-dependent)
-Purpose: Precision strikes against land and sea targets
 
 4. Tomahawk
 -----------
-Country: United States
-Type: Cruise Missile
-Approximate Range: 1,600 km
-Purpose: Long-range precision strike
 
 5. Minuteman III
 ----------------
-Country: United States
-Type: Intercontinental Ballistic Missile (ICBM)
-Approximate Range: 13,000 km
-Purpose: Strategic nuclear deterrence
 
 6. Trident II D5
 ----------------
-Country: United States / United Kingdom
-Type: Submarine-Launched Ballistic Missile (SLBM)
-Approximate Range: 12,000 km
-Purpose: Sea-based strategic deterrence
 
 7. Iskander-M
 -------------
-Country: Russia
-Type: Short-Range Ballistic Missile (SRBM)
-Approximate Range: 500 km
-Purpose: Tactical strike missions
 
 8. DF-41
 --------
-Country: China
-Type: Intercontinental Ballistic Missile (ICBM)
-Approximate Range: 12,000–15,000 km
-Purpose: Strategic deterrence
 
 9. Patriot (MIM-104)
 --------------------
-Country: United States
-Type: Surface-to-Air Missile (SAM) System
-Approximate Range: Up to 160 km (variant-dependent)
-Purpose: Air and missile defense
 
 10. Iron Dome
 -------------
-Country: Israel
-Type: Short-Range Air Defense System
-Approximate Range: Up to 70 km
-Purpose: Intercepts rockets and artillery
 
-Missile Categories
-==================
-- Ballistic Missiles: Follow a high, arcing trajectory after launch.
-- Cruise Missiles: Fly within the atmosphere using continuous propulsion.
-- Surface-to-Air Missiles (SAMs): Defend against aircraft and incoming missiles.
-- Anti-Ship Missiles: Designed to engage naval vessels.
-- Anti-Tank Guided Missiles (ATGMs): Used against armored vehicles.
-
-Note:
-The ranges listed are approximate and may vary by variant or official updates.
+S4000 Sudharshan
