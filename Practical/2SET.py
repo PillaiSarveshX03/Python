@@ -1,134 +1,80 @@
-# 1. Creating a set of integers
-my_set = {1, 2, 3}
-print(my_set)  # Output: {1, 2, 3}
+# 1. Creating a set with five numbers
+set1 = {1, 2, 3, 4, 5}
+print(set1)  # Output: {1, 2, 3, 4, 5}
 
-# 2. Creating a set with mixed data types
-my_set = {1.0, "Hello", (1, 2, 3)}
-print(my_set)  # Contains 1.0, "Hello", and (1, 2, 3)
-# NOTE: Set element order is not guaranteed.
+# 2. Adding an element to a set
+set1.add(6)
+print(set1)  # Contains {1, 2, 3, 4, 5, 6}
 
-# 3. Removing duplicates using set()
-raw_list = [1, 2, 2, 3, 3, 3]
-cleaned_set = set(raw_list)
-print(cleaned_set)  # Output: {1, 2, 3}
+# 3. Removing an element from a set
+set1.remove(3)
+print(set1)  # Contains {1, 2, 4, 5, 6}
 
-# 4. Creating an empty set
-empty_set = set()
-print(empty_set)  # Output: set()
-# NOTE: {} creates an empty dictionary, not a set.
+# 4. Performing union of two sets
+print({1, 2, 3}.union({3, 4, 5}))
+# Output: {1, 2, 3, 4, 5}
 
-# 5. Adding a single element using add()
-skills = {"Python", "SQL"}
-skills.add("Git")
-print(skills)  # Contains Python, SQL, Git
+# 5. Performing intersection of two sets
+print({1, 2, 3}.intersection({2, 3, 4}))
+# Output: {2, 3}
 
-# 6. Adding multiple elements using update()
-skills.update(["AWS", "Docker"])
-print(skills)  # Contains Python, SQL, Git, AWS, Docker
+# 6. Finding the difference between two sets
+print({1, 2, 3}.difference({2, 3}))
+# Output: {1}
 
-# 7. Removing an element using remove()
-languages = {"Python", "Java", "C++"}
-languages.remove("Java")
-print(languages)  # Contains Python and C++
+# 7. Converting a list into a set
+print(set([1, 2, 2, 3]))
+# Output: {1, 2, 3} (duplicates removed)
 
-# 8. Removing an element safely using discard()
-languages.discard("Ruby")
-print(languages)  # No error if Ruby is absent
+# 8. Finding the length of a set
+print(len(set1))  # Output: 5
 
-# 9. Removing and returning an arbitrary element using pop()
-languages = {"Python", "Java", "C++"}
-removed = languages.pop()
-print(removed)    # One arbitrary element removed
-print(languages)  # Remaining elements
- 
-# 10. Removing all elements using clear()
-languages.clear()
-print(languages)  # Output: set()
+# 9. Checking whether a value exists in a set
+print(3 in set1)  # Output: False (3 was removed earlier)
 
-
-# ==================== MATHEMATICAL OPERATIONS ====================
-
-setA = {1, 2, 3, 4}
-setB = {3, 4, 5, 6}
-
-# 11. Union: elements from either set
-print(setA | setB)  # Output: {1, 2, 3, 4, 5, 6}
-print(setA.union(setB))  # Same result
-
-# 12. Intersection: common elements
-print(setA & setB)  # Output: {3, 4}
-print(setA.intersection(setB))  # Same result
-
-# 13. Difference: elements in A but not in B
-print(setA - setB)  # Output: {1, 2}
-print(setA.difference(setB))  # Same result
-
-# 14. Symmetric difference: elements in either set, but not both
-print(setA ^ setB)  # Output: {1, 2, 5, 6}
-print(setA.symmetric_difference(setB))  # Same result
-
-
-# ==================== SUBSET AND SUPERSET ====================
-
-# 15. Checking subset and superset relationships
-small = {1, 2}
-large = {1, 2, 3, 4}
-
-print(small.issubset(large))    # Output: True
-print(large.issuperset(small))  # Output: True
-
-# 16. Checking whether sets have no common elements
-print(small.isdisjoint(large))  # Output: False
-
-
-
+# 10. Clearing all elements from a set
+set1.clear()
+print(set1)  # Output: set()
 
 
 # ==================== EXTRA TOPICS ====================
 
-# 17. Checking membership                       # EXTRA
-numbers = {10, 20, 30}
-print(20 in numbers)      # Output: True
-print(50 not in numbers)  # Output: True
+# 11. Removing an element safely using discard()  # EXTRA
+set2 = {1, 2, 3}
+set2.discard(5)  # No error even though 5 is absent
+print(set2)  # Output: {1, 2, 3}
 
-# 18. Finding the number of elements              # EXTRA
-print(len(numbers))  # Output: 3
+# 12. Adding multiple elements using update()      # EXTRA
+set2.update([4, 5, 6])
+print(set2)  # Contains {1, 2, 3, 4, 5, 6}
 
-# 19. Looping through a set                       # EXTRA
-for item in numbers:
-    print(item)  # Prints each element; order is not guaranteed
+# 13. Finding the symmetric difference             # EXTRA
+print({1, 2, 3} ^ {3, 4, 5})
+# Output: {1, 2, 4, 5}
 
-# 20. Checking whether a set is a subset using an operator  # EXTRA
-print({1, 2} <= {1, 2, 3})  # Output: True
+# 14. Checking subset relationship                 # EXTRA
+print({1, 2}.issubset({1, 2, 3}))  # Output: True
 
-# 21. Checking whether a set is a superset using an operator  # EXTRA
-print({1, 2, 3} >= {1, 2})  # Output: True
+# 15. Checking superset relationship               # EXTRA
+print({1, 2, 3}.issuperset({1, 2}))  # Output: True
 
-# 22. Copying a set                               # EXTRA
-original = {1, 2, 3}
-copied = original.copy()
-print(copied)  # Output: {1, 2, 3}
+# 16. Checking whether sets are disjoint            # EXTRA
+print({1, 2}.isdisjoint({3, 4}))  # Output: True
 
-# 23. Creating a set using set comprehension      # EXTRA
-squares = {x**2 for x in range(1, 6)}
-print(squares)  # Contains 1, 4, 9, 16, 25
+# 17. Removing and returning an arbitrary element  # EXTRA
+set3 = {10, 20, 30}
+removed = set3.pop()
+print(removed)  # One arbitrary element
+print(set3)  # Remaining elements
 
-# 24. Converting a set into a list                 # EXTRA
-numbers = {10, 20, 30}
-number_list = list(numbers)
-print(number_list)  # A list containing the set elements; order may vary
+# 18. Checking membership                          # EXTRA
+print(2 in {1, 2, 3})  # Output: True
 
-# 25. Creating a frozenset                        # EXTRA
-fixed_set = frozenset([1, 2, 3])
-print(fixed_set)  # frozenset({1, 2, 3})
-# A frozenset is immutable; its elements cannot be added or removed.
+# 19. Creating an empty set                         # EXTRA
+empty_set = set()
+print(empty_set)  # Output: set()
 
-# 26. Demonstrating that duplicate elements are ignored  # EXTRA
-numbers = {1, 2, 2, 3, 3}
-print(numbers)  # Contains only 1, 2, 3
-
-# 27. Demonstrating invalid indexing               # EXTRA
-# print(numbers[0])  # TypeError: sets do not support indexing
-
-# 28. Demonstrating invalid mutable elements       # EXTRA
-# invalid_set = {[1, 2, 3]}  # TypeError: lists are unhashable
+# 20. Removing duplicates from a list              # EXTRA
+numbers = [1, 1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)  # Contains {1, 2, 3}
